@@ -1,0 +1,88 @@
+{% extends 'base_dashboard.html' %} 
+
+{% block content %}
+
+{% load widget_tweaks %}
+
+<div class="col-lg-6 mx-auto m-3">
+	<form method="POST"	 class="">
+		{% csrf_token %} 
+
+			<img src="{{profile.avatar.url}}" alt="{{ profile.user.username }}" class="avatar"  accept=".jpg,.jpeg,.png"/>
+	
+	    <h2 class="text-center">{{ profile.user | title }}</h2>
+	    <p class="text-center"><a href="mailto:{{profile.user.email}}">{{profile.user.email}}</a></p>
+
+		<div class="form-group my-2 my-3">Avatar:
+			{% render_field form.avatar type="file" class="form-control" id="" %}
+		</div>
+
+		<div class="form-group my-2 my-3">Festejados:
+			{% render_field form.festejados type="text" class="form-control" id="festejados" %}
+		</div>
+
+		<div class="form-group my-2 my-3">Paquete:
+			{% render_field form.paquete type="text" class="form-control" id="paquete" %}
+		</div>
+
+		<div class="form-group my-2 my-3">Fecha Evento:
+			{% render_field form.fecha_evento type="text" class="form-control" id="fecha_evento" %}
+		</div>
+
+		<div class="form-group my-2 my-3">Lugar Evento:
+			{% render_field form.lugar_fiesta type="text" class="form-control" id="lugar_evento" %}
+		</div>
+
+		<div class="form-group my-2 my-3">Lugar Ceremonia:
+			{% render_field form.lugar_ceremonia type="text" class="form-control" id="lugar_ceremonia" %}
+		</div>
+
+		<div class="form-group my-2 my-3">Familiares El:
+			{% render_field form.familiares1_festejados type="text" class="form-control" id="familiares1" %}
+		</div>
+
+		<div class="form-group my-2 my-3">Familiares El:
+			{% render_field form.familiares1_foto type="file" class="form-control" id="familiares1_foto" %}
+		</div>
+
+		<div class="form-group my-2 my-3">Familiares Ella:
+			{% render_field form.familiares2_festejados type="text" class="form-control" id="familiares2" %}
+		</div>
+
+		<div class="form-group my-2 my-3">Familiares Ella:
+			{% render_field form.familiares2_foto type="file" class="form-control" id="familiares2_foto" %}
+		</div>
+
+		<div class="form-group my-2 my-3">Codigo Vestimenta:
+			{% render_field form.codigo_vestimenta type="text" class="form-control" id="codigo_vestimenta" %}
+		</div>
+
+		<div class="form-group my-2 my-3">Mesa de Regalos:
+			{% render_field form.mesa_regalos type="text" class="form-control" id="mesa_regalos" %}
+		</div>
+
+		<div class="form-group my-2 my-3">URL Mesa Regalos:
+			{% render_field form.link_regalos type="text" class="form-control" id="link_regalos" %}
+		</div>
+
+		<div class="form-group my-2"><a onclick="Random();">URL Invitación:</a>
+			{% render_field form.slug type="text" class="form-control" id="slug" %}
+		</div>
+
+		<div class="form-group my-2 my-3">Template Invitación:
+			{% render_field form.template_invitacion type="text" class="form-control" id="template_invitacion" %}
+		</div>
+
+		<div class="form-group my-2"><a onclick="Random2();">Referencia de Pago:</a>
+			{% render_field form.ref_pago type="text" class="form-control" id="ref_pago" %}
+		</div>
+
+		<div class="form-group my-2 my-3">Pagado:
+			{% render_field form.pagado type="checkbox" class="btn-dark" id="pagado" %}
+		</div>
+
+		<button type="submit" class="btn btn-main full-width" >Update Profile</button>
+	</form>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,26 @@
+{% extends 'base_dashboard.html' %}
+
+{% block content %} 
+
+{% if user.is_authenticated %}
+<main>
+
+<div class='row'>
+    <div class="p-5 mb-4 bg-light rounded-3 col-lg-6 text-center">
+      <div class="container-fluid">
+        <h1 class="display-5 fw-bold">Como Pagar?</h1>
+        <p class="h2 text-color">Contamos con diferentes metodos de pago. <br>Tu numero de referencia es: <br><span class='h1'>{{ user.profile.ref_pago }}</span></p>
+      </div>
+    </div>
+    <div class="p-5 mb-4 bg-light rounded-3 col-lg-6">
+        <div class="container-fluid">
+            <p class="h1 icofont-paypal"><br><span class='text-color h4'>Link Pago</span></p>
+            <p class="h1 icofont-visa"><br><span class='text-color h4'>Transferencia CLABE:</span></p>
+            <p class="h1 icofont-dollar"><br><span class='text-color h4'>Oxxo</span></p>
+        </div>
+      </div>
+</div>
+
+{% endif %}
+
+{% endblock content %}

@@ -1,0 +1,17 @@
+{%extends 'base_dashboard.html'%}
+{% load static %}
+
+{%block content%}
+{% if user.is_superuser %}
+<div class="p-4">
+	<h2>Clientes</h2>
+	{% if profilelist %}
+	<ul>
+		{% for profiledetail in profilelist %}
+            <li><a href="{% url 'profiledetail' profiledetail.id %}" >{{ profiledetail.user }}</a></li>
+		{% endfor %}
+	{% endif %}
+    </ul>
+</div>
+{% endif %}
+{%endblock content%}

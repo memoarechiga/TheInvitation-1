@@ -1,0 +1,51 @@
+{% extends 'base_dashboard.html' %}
+
+{% block content %} 
+
+{% if user.is_superuser %}
+
+<h1>Welcome SuperUser, you'll have many access!!</h1>
+
+{% else %}
+
+{% if user.is_authenticated %}
+<main>
+  
+      <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+          <h1 class="display-5 fw-bold">Panel de Control</h1>
+          <p class="col-md-8 fs-4">Aqui encontraras todo lo relacionado a tu paquete contratado, podras visitar tu espacio cuantas veces desees.</p>
+          <button class="btn btn-primary btn-lg" type="button">Paquete: {{ user.profile.paquete }}</button>
+          {% if user.profile.pagado == False %}
+          <a href="{% url 'userpayment' %}" class="btn btn-main mx-3">Pagar Paquete</a>
+          {% endif %}
+        </div>
+      </div>
+      
+      <div class="row align-items-md-stretch mb-5 mx-2">
+        <div class="col-md-6">
+          <div class="h-100 p-5 text-bg-dark rounded-3">
+            <h2 class="text-light">Comparte tu invitacion</h2>
+            <p>Dando click en el boton, podras compartir tu invitacion con tus invitados via whatsapp o con el siguiente codigo. 
+              {% if user.profile.pagado == True %}
+              <br> <a href="http://127.0.0.1:8000/invitacion{{ user.profile.template_invitacion }}/{{ user.profile.slug }}">Ir a Invitación</a></p>
+            <a href="https://api.whatsapp.com/send?phone=&text='hello {{ user.username }}' " class="btn btn-outline-light border-light" type="button">Compartir Invitación</a>
+              {% endif %}
+          </div>
+
+        </div>
+        <div class="col-md-6">
+          <div class="h-100 p-5 bg-light border rounded-3">
+            <h2>Dile a tus amigos!!</h2>
+            <p>Nos puedes recomendar con tus amigos y amigas para que tambien puedan compartir Invitaciones Inteligentes para sus eventos.</p>
+            <button class="btn btn-outline-secondary border-dark" type="button">Recomiendanos!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+{% endif %}
+{% endif %}
+
+{% endblock content %}

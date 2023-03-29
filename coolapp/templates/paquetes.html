@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %} 
+
+<style>
+    .bg-2 {
+      background: url("{% static 'img/house.png' %}");
+      background-size: cover;
+      padding: 130px 0px;
+    }
+    </style>
+
+
+<section class=" bg-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item"><a href="{% url 'index' %}" class="text-sm letter-spacing text-white text-uppercase font-weight-bold">Inicio</a></li>
+            <li class="list-inline-item"><span class="text-white">|</span></li>
+            <li class="list-inline-item"><a href="#" class="text-color text-uppercase text-sm letter-spacing">Quienes somos</a></li>
+          </ul>
+           <h1 class="text-lg text-white mt-2">The Invitation</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section pricing start -->
+<section class="section pricing">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-8 text-center">
+				<div class="section-title">
+					<div class="divider mb-3"></div>
+					<h2>Paquetes <br>
+                    <a href="#" class="btn btn-main mt-4">DEMO</a>
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+				<div class="card rounded-0 px-4 py-5 ">
+					<h4 class="card-title text-capitalize font-weight-normal font-secondary">PREMIUM</h4>
+					<h3 class="text-lg font-secondary position-relative mt-2"><sup class="text-sm position-absolute ">$</sup>1500  <sub>.00</sub></h3>
+
+ 					<div class="card-body mt-2">
+						<ul class="list-unstyled lh-35 mb-4">
+							<li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Diseño Personalizado</li>
+							<li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Ubicacion GPS</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Itinerario del Evento</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Cuenta Regresiva</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Mesa de Regalos</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Nombre de Familiares</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Reproduccion de Video Corto</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>PDF con Codigo QR</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Hasta 6 cambios</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Confirmación de asistencia</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Album de Recuerdos (20 fotos)</li>
+						</ul>
+						<a href="#" class="btn btn-solid-border text-black">Lo quiero!</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+				<div class="card rounded-0 px-4 py-5 ">
+					<h4 class="card-title text-capitalize font-weight-normal font-secondary">GOLD</h4>
+					<h3 class="text-lg font-secondary position-relative mt-2"><sup class="text-sm position-absolute">$</sup>1000 <sub>.00</sub></h3>
+
+ 					<div class="card-body mt-2">
+						<ul class="list-unstyled lh-35 mb-4">
+							<li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Diseño Personalizado</li>
+							<li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Ubicacion GPS</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Itinerario del Evento</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Cuenta Regresiva</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Mesa de Regalos</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Nombre de Familiares</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Reproduccion de Video Corto</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>PDF con Codigo QR</li>
+                            <li><i class="ti-close mr-3"></i>Hasta 6 cambios</li>
+                            <li><i class="ti-close mr-3"></i>Confirmación de asistencia</li>
+                            <li><i class="ti-close mr-3"></i>Album de Recuerdos (20 fotos)</li> 
+						</ul>
+						<a href="#" class="btn btn-main">Lo quiero!</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+				<div class="card rounded-0 px-4 py-5 ">
+					<h4 class="card-title text-capitalize font-weight-normal font-secondary">SILVER</h4>
+					<h3 class="text-lg font-secondary position-relative mt-2"><sup class="text-sm position-absolute">$</sup>600 <sub>.00</sub></h3>
+
+ 					<div class="card-body mt-2">
+						<ul class="list-unstyled lh-35 mb-4">
+							<li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Diseño Personalizado</li>
+							<li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Ubicacion GPS</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Itinerario del Evento</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Cuenta Regresiva</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Mesa de Regalos</li>
+                            <li><i class="ti-close mr-3"></i>Nombre de Familiares</li>
+                            <li><i class="ti-close mr-3"></i>Reproduccion de Video Corto</li>
+                            <li><i class="ti-close mr-3"></i>PDF con Codigo QR</li>
+                            <li><i class="ti-close mr-3"></i>Hasta 6 cambios</li>
+                            <li><i class="ti-close mr-3"></i>Confirmación de asistencia</li>
+                            <li><i class="ti-close mr-3"></i>Album de Recuerdos (20 fotos)</li>
+						</ul>
+						<a href="#" class="btn btn-solid-border text-black">Lo quiero!</a>
+					</div>
+				</div>
+			</div>
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 mt-4">
+				<div class="card rounded-0 px-4 py-5 ">
+					<h4 class="card-title text-capitalize font-weight-normal font-secondary">BASICO<span class="text-sm bg-dark text-light py-1 px-2 mr-2 mx-2">Express</span></h4>
+					<h3 class="text-lg font-secondary position-relative mt-2"><sup class="text-sm position-absolute">$</sup>300 <sub>.00</sub></h3>
+
+ 					<div class="card-body mt-2">
+						<ul class="list-unstyled lh-35 mb-4">
+							<li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Diseño Personalizado</li>
+							<li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Ubicacion GPS</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Itinerario del Evento</li>
+                            <li><i class="ti-close mr-3"></i>Cuenta Regresiva</li>
+                            <li><i class="ti-close mr-3"></i>Mesa de Regalos</li>
+                            <li><i class="ti-close mr-3"></i>Nombre de Familiares</li>
+                            <li><i class="ti-close mr-3"></i>Reproduccion de Video Corto</li>
+                            <li><i class="ti-close mr-3"></i>PDF con Codigo QR</li>
+                            <li><i class="ti-close mr-3"></i>Hasta 6 cambios</li>
+                            <li><i class="ti-close mr-3"></i>Confirmación de asistencia</li>
+                            <li><i class="ti-close mr-3"></i>Album de Recuerdos (20 fotos)</li>
+						</ul>
+						<a href="#" class="btn btn-solid-border text-black">Lo quiero!</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Section pricing End -->
+
+
+
+
+
+    {% endblock content %}

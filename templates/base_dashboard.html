@@ -1,0 +1,160 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+    <!-- Icofont Css -->
+  <link rel="stylesheet" href="{% static 'plugins/icofont/icofont.min.css' %}">
+  <!-- Themify Css -->
+  <link rel="stylesheet" href="{% static 'plugins/themify/css/themify-icons.css' %}">
+  <!-- animate.css -->
+  <link rel="stylesheet" href="{% static 'plugins/animate-css/animate.css' %}">
+  <!-- Magnify Popup -->
+  <link rel="stylesheet" href="{% static 'plugins/magnific-popup/dist/magnific-popup.css' %}">
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="{% static 'plugins/slick-carousel/slick/slick.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/slick-carousel/slick/slick-theme.css' %}">
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/styletodo.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/fontawesome/css/all.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> 
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <title>Party App</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand p-2" href="{% url 'index' %}">
+            <h2 class=" text-capitalize text-white"></i>The<span class="text-color">Invitation</span></h2>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse mx-auto " id="navbarNav">
+
+            {% if user.is_superuser %}
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item px-3">
+                <a class="nav-link active" aria-current="page" href="{% url 'dashboard' %}">Dashboard</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link active" aria-current="page" href="{% url 'profilelist' %}">Users</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link active" aria-current="page" href="{% url 'register' %}">New User</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link active" aria-current="page" href="{% url 'admin:index' %}">AdminPage</a>
+              </li>
+            </ul>
+
+            {% else %}
+
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item px-3">
+                <a class="nav-link active" aria-current="page" href="{% url 'dashboard' %}">Dashboard</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link active" aria-current="page" href="{% url 'usergallery' %}">My Galery</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link active" href="#">Event Info</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link active" href="#">Extras</a>
+              </li>
+            </ul>
+            {% endif %}
+            <ul class="navbar-nav justify-content-end mx-5">
+              {% if user.is_authenticated %}
+                <li class="nav-item px-3">
+                    <a href="{% url 'dashboard' %}" class="nav-link active" >Hola, {{ user.username|default:'Guest' }}!</a>
+                </li>
+                <li class="nav-item px-3">
+                <a class="nav-link active" href="{% url 'logout' %}">Logout</a>
+              {% else %}
+                  <a class="nav-link active" href="{% url 'login' %}">Login</a>
+              {% endif %}
+                  </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+{% block content %} {% endblock content %}
+
+<!-- Section Footer Start -->
+<!-- footer Start -->
+<footer class="footer bg-black-50">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+				<h2 class="text-white mb-4">TheInvitation</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus illo ad quo sunt maiores, sint nostrum omnis eaque cumque dolorum.</p>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			</div>
+
+			<div class="col-lg-2 col-md-5 mb-5 mb-lg-0 mx-auto">
+				<div class="footer-widget">
+					<h4 class="mb-4 text-white letter-spacing text-uppercase">Links</h4>
+					<ul class="list-unstyled footer-menu lh-40 mb-0">
+						<li><a href="{% url 'catalogo' %}"><i class="ti-angle-double-right mr-2"></i>Catalogo</a></li>
+						<li><a href="service.html"><i class="ti-angle-double-right mr-2"></i>Paquetes</a></li>
+						<li><a href="pricing.html"><i class="ti-angle-double-right mr-2"></i>Proveedores</a></li>
+						<li><a href="course.html"><i class="ti-angle-double-right mr-2"></i>Contacto</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-5">
+				<div class="footer-widget">
+					<h4 class="mb-4 text-white letter-spacing text-uppercase">Home location</h4>
+					<p>Altamira, MX </p>
+					<span class="text-white">833 111 11 22</span>
+					<span class="text-white">info@demolink.org</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="row align-items-center mt-5 px-3 bg-black mx-1">
+			<div class="col-lg-4 mx-5">
+				<p class="text-white mt-3">TheInvitation © 2023</p>
+			</div>
+			<div class="col-lg-6 ml-auto">
+				<ul class="list-inline mb-0 footer-socials text-end">
+					<li class="list-inline-item"><a href="https://www.facebook.com/themefisher"><i class="ti-facebook"></i></a></li>
+					<li class="list-inline-item"><a href="https://twitter.com/themefisher"><i class="ti-twitter"></i></a></li>
+					<li class="list-inline-item"><a href="https://github.com/themefisher/"><i class="ti-github"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- Section Footer End -->
+
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+  <script src="{% static 'plugins/jquery/jquery.js' %}"></script>
+   <!-- Slick Slider -->
+   <script src="{% static 'plugins/slick-carousel/slick/slick.min.js' %}"></script>
+   <!--  Magnific Popup-->
+   <script src="{% static 'plugins/magnific-popup/dist/jquery.magnific-popup.min.js' %}"></script>
+   <!-- Form Validator -->
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+   <!-- Google Map -->
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"></script>
+   <script src="{% static 'plugins/google-map/gmap.js' %}"></script>
+   <script src="{% static 'js/script.js' %}"></script>
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+     AOS.init();
+   </script>
+
+</body>
+</html>

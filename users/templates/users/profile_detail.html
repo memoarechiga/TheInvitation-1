@@ -1,0 +1,38 @@
+{%extends 'base_dashboard.html'%}
+{% load static %}
+
+{%block content%}
+
+<div class="row m-3">
+	<div class="p-5 col-lg-5 mx-auto text-center border-end">
+			
+			<img src="{{profiledetail.avatar.url}}" alt="{{ profiledetail.user }}" class="avatar"  accept=".jpg,.jpeg,.png"/>
+
+			<h2 class="text-center">{{ profiledetail.user | title }}</h2>
+		    <p class="text-center"><a href="mailto:{{profiledetail.user.email}}">{{profiledetail.user.email}}</a></p>
+			<a class="btn btn-main" href="{% url 'profileupdate' profiledetail.id %}">Update</a>
+	</div>
+	<div class="col-lg-7 p-4 mx-auto">
+		<div class="row">
+			<div class="col-lg-5">
+				<h4>Festejados: <br><span class="text-color">{{ profiledetail.festejados }}</span></h4>
+				<h4>Paquete: <br><span class="text-color">{{ profiledetail.paquete }}</span></h4>
+				<h4>Fecha Evento: <br><span class="text-color">{{ profiledetail.fecha_evento }}</span></h4>
+				<h4>Lugar Evento: <br><span class="text-color">{{ profiledetail.lugar_fiesta }}</span></h4>
+				<h4>Lugar Ceremonia: <br><span class="text-color">{{ profiledetail.lugar_ceremonia }}</span></h4>
+				<h4>Familiares El: <br><span class="text-color">{{ profiledetail.familiares1_festejados }}</span></h4>
+				<h4>Familiares Ella: <br><span class="text-color">{{ profiledetail.familiares2_festejados }}</span></h4>
+			</div>
+			<div class="col-lg-5 ">
+				<h4>Codigo Vestimenta: <br><span class="text-color">{{ profiledetail.codigo_vestimenta }}</span></h4>
+				<h4>Mesa de Regalos: <br><span class="text-color">{{ profiledetail.mesa_regalos }}</span></h4>
+				<h4>Link Mesa Regalos: <br><span class="text-color">{{ profiledetail.link_regalos }}</span></h4>
+				<h4>URL Invitacion: <br><span class="text-color">{{ profiledetail.slug }}</span></h4>
+				<h4>Template Invitacion: <br><span class="text-color">{{ profiledetail.template_invitacion }}</span></h4>
+				<h4>Referencia de Pago: <br><span class="text-color">{{ profiledetail.ref_pago }}</span></h4>
+				<h4>Pagado?: <br><span class="text-color">{{ profiledetail.pagado }}</span></h4>
+			</div>
+		</div>
+	</div>
+</div>
+{%endblock content%}

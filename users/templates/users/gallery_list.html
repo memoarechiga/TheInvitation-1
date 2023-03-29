@@ -1,0 +1,17 @@
+{%extends 'base_dashboard.html'%}
+{% load static %}
+
+{%block content%}
+{% if user.is_superuser %}
+<div class="center">
+	<h2>Galeria</h2>
+	{% if gallerylist %}
+	<ul>
+		{% for gallerydetail in gallerylist %}
+            <li><a href="{% url 'gallerydetail' gallerydetail.id %}" >{{ gallerydetail.user }}</a></li>
+		{% endfor %}
+	{% endif %}
+    </ul>
+</div>
+{% endif %}
+{%endblock content%}

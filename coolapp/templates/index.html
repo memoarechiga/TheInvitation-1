@@ -1,0 +1,268 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %} 
+<style>
+.slider {
+  background: url("{% static 'img/house.png' %}");
+  background-size: cover;
+  padding: 130px 0px;
+}
+</style>
+
+<div class="main-wrapper ">
+
+<!-- Section Slider Start -->
+<!-- Slider Start -->
+<section class="slider">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 animate__animated animate__backInRight">
+				<span class="h6 d-inline-block mb-4 subhead text-uppercase">Creative & Original</span>
+				<h1 class="text-uppercase text-white mb-5 ">Elige lo mejor <span class="text-color">Invitaciones inteligentes</span></h1>
+				<a href="{% url 'about' %}"  class="btn btn-main ">Explorar <i class="ti-angle-right ml-3"></i></a>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Section Slider End -->
+
+<!-- Section Intro Start -->
+<section class="mt-80px ">
+	<div class="container">
+		<div class="row" data-aos="fade-up">
+			<div class="col-lg-4 col-md-6">
+				<div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1">
+					<span class="number">01</span>
+					<h3 class="mt-3">Elige</h3>
+					<p class="mt-3 mb-4">Tenemos un amplio catalogo de diseños modernos y frescos para tu elección.</p>
+					<a href="about.html" class="text-color text-uppercase font-size-13 letter-spacing font-weight-bold"><i class="ti-minus mr-2 "></i>mas detalles</a>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1">
+					<span class="number">02</span>
+					<h3 class="mt-3">Contactanos</h3>
+					<p class="mt-3 mb-4">Personalizamos tu invitacion con todos los detalles de tu evento.</p>
+					<a href="about.html" class="text-color text-uppercase font-size-13 letter-spacing font-weight-bold"><i class="ti-minus mr-2 "></i>mas detalles</a>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1">
+					<span class="number">03</span>
+					<h3 class="mt-3">Comparte</h3>
+					<p class="mt-3 mb-4">Se puede abrir en cualquier dispositivo iOS o Android con internet.</p>
+					<a href="about.html" class="text-color text-uppercase font-size-13 letter-spacing font-weight-bold"><i class="ti-minus mr-2 "></i>mas detalles</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Section Intro End -->
+
+<!-- Section About start -->
+<section class="section about">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-6">
+				<img src="{% static 'img/invitacion.jpg' %}" alt="" class="img-fluid rounded shadow w-100">
+			</div>
+			
+			<div class="col-lg-6">
+				<div class="pl-3 mt-5 mt-lg-0">
+					<h2 class="mt-1 mb-3">Las<br> <span class="text-color">Invitaciones Inteligentes</span> te van a sorprender. </h2>
+
+					<p class="mb-4">Se original con una invitación tipo web personalizada, en donde se incluye todos los datos de tu evento, fotos, videos, mapa, formulario de confirmación y toda la información que necesites compartir.</p>
+
+					<a href="#" class="btn btn-main">DEMO<i class="fa fa-angle-right ml-2"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Section About End -->
+
+<!-- Section Services Start -->
+<section class="section services ">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-8 text-center">
+				<div class="section-title">
+					<div class="divider mb-3"></div>
+					<h2>Incluye:</h2>
+					<p>Todos los paquetes incluyen un espacio personalizado para nuestros clientes.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row no-gutters" data-aos="fade-down">
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="text-center  px-4 py-5 hover-style-1">
+					<i class="icofont-paper text-lg text-color"></i>
+					<h4 class="mt-3 mb-4 text-uppercase">Diseño personalizado</h4>
+					<p>Cada invitación es única e irrepetible, podés adaptar los diseños.</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="text-center  px-4 py-5 hover-style-1">
+					<i class="icofont-location-pin text-lg text-color"></i>
+					<h4 class="mt-3 mb-4 text-uppercase">Ubicación</h4>
+					<p>Mapa de ubicación con Google Maps.</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="text-center  px-4 py-5 hover-style-1">
+					<i class="icofont-check text-lg text-color"></i>
+					<h4 class="mt-3 mb-4 text-uppercase">Confirmacion Asistencia</h4>
+					<p>Tus invitados pueden confirmar si pueden o no, ir al evento.</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="text-center  px-4 py-5 hover-style-1">
+					<i class="icofont-gift text-lg text-color"></i>
+					<h4 class="mt-3 mb-4 text-uppercase">Mesa de regalos</h4>
+					<p>Mesa de regalos y datos bancarios.</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="text-center  px-4 py-5 hover-style-1">
+					<i class="icofont-smart-phone text-lg text-color"></i>
+					<h4 class="mt-3 mb-4 text-uppercase">Envios Ilimitados</h4>
+					<p>Se puede conpartir sin limites de envío.</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="text-center  px-4 py-5 hover-style-1">
+					<i class="icofont-clock-time text-lg text-color"></i>
+					<h4 class="mt-3 mb-4 text-uppercase">Conteo regresivo</h4>
+					<p>Reloj inteligente que marca el tiempo para que sea tu evento.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Section Services End -->
+
+<!-- Section Course Start -->
+<section class="section course bg-gray">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-8 text-center">
+				<div class="section-title">
+					<div class="divider mb-3"></div>
+					<h2>Paquetes</h2>
+					<p>Nos adaptamos a tus necesidades y a tu evento.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row" data-aos="zoom-in">
+			<div class="col-lg-3 col-md-6">
+				<div class="card border-0 rounded-0 p-0 mb-5 mb-lg-0 shadow-sm">
+					<img src="{% static 'img/.png' %}" alt="" class="card-img-top">
+
+					<div class="card-body">
+						<a href="{% url 'paquetes' %}"><h4 class="font-secondary mb-0">Premium</h4></a>
+						<p class=" mb-2">$1,500.00</p>
+						<ul class="list-unstyled lh-35 mb-4">
+							<li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Diseño Personalizado</li>
+							<li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Ubicacion GPS</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Itinerario del Evento</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Cuenta Regresiva</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Mesa de Regalos</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Nombre de Familiares</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Reproduccion de Video Corto</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>PDF con Codigo QR</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Hasta 6 cambios</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Confirmación de asistencia</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Album de Recuerdos (20 fotos)</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-6">
+				<div class="card border-0 rounded-0 p-0 mb-5 mb-lg-0 shadow-sm">
+					<img src="{% url 'paquetes' %}" alt="" class="img-fluid">
+
+					<div class="card-body">
+						<a href="course-single.html"><h4 class="font-secondary mb-0">Gold</h4></a>
+						<p class="mb-2">$1,000.00</p>
+						<ul class="list-unstyled lh-35 mb-4">
+							<li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Diseño Personalizado</li>
+							<li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Ubicacion GPS</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Itinerario del Evento</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Cuenta Regresiva</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Mesa de Regalos</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Nombre de Familiares</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Reproduccion de Video Corto</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>PDF con Codigo QR</li>
+                            <li><i class="ti-close mr-3"></i>Hasta 6 cambios</li>
+                            <li><i class="ti-close mr-3"></i>Confirmación de asistencia</li>
+                            <li><i class="ti-close mr-3"></i>Album de Recuerdos (20 fotos)</li> 
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-6">
+				<div class="card border-0 rounded-0 p-0 mb-5 mb-lg-0 shadow-sm">
+					<img src="{% url 'paquetes' %}" alt="" class="img-fluid">
+
+					<div class="card-body">
+						<a href="course-single.html"><h4 class="font-secondary mb-0">Silver</h4></a>
+						<p class=" mb-2">$600.00</p>
+						<ul class="list-unstyled lh-35 mb-4">
+							<li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Diseño Personalizado</li>
+							<li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Ubicacion GPS</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Itinerario del Evento</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Cuenta Regresiva</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Mesa de Regalos</li>
+                            <li><i class="ti-close mr-3"></i>Nombre de Familiares</li>
+                            <li><i class="ti-close mr-3"></i>Reproduccion de Video Corto</li>
+                            <li><i class="ti-close mr-3"></i>PDF con Codigo QR</li>
+                            <li><i class="ti-close mr-3"></i>Hasta 6 cambios</li>
+                            <li><i class="ti-close mr-3"></i>Confirmación de asistencia</li>
+                            <li><i class="ti-close mr-3"></i>Album de Recuerdos (20 fotos)</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<div class="card border-0 rounded-0 p-0 mb-5 mb-lg-0 shadow-sm">
+					<img src="{% url 'paquetes' %}" alt="" class="img-fluid">
+
+					<div class="card-body">
+						<a href="course-single.html"><h4 class="font-secondary mb-0">Basico</h4></a>
+						<p class=" mb-2">$300.00</p>
+						<ul class="list-unstyled lh-35 mb-4">
+							<li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Diseño Personalizado</li>
+							<li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Ubicacion GPS</li>
+                            <li class="text-black font-weight-bold"><i class="ti-check mr-3 text-color "></i>Itinerario del Evento</li>
+                            <li><i class="ti-close mr-3"></i>Cuenta Regresiva</li>
+                            <li><i class="ti-close mr-3"></i>Mesa de Regalos</li>
+                            <li><i class="ti-close mr-3"></i>Nombre de Familiares</li>
+                            <li><i class="ti-close mr-3"></i>Reproduccion de Video Corto</li>
+                            <li><i class="ti-close mr-3"></i>PDF con Codigo QR</li>
+                            <li><i class="ti-close mr-3"></i>Hasta 6 cambios</li>
+                            <li><i class="ti-close mr-3"></i>Confirmación de asistencia</li>
+                            <li><i class="ti-close mr-3"></i>Album de Recuerdos (20 fotos)</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-lg-8">
+				<div class="mt-5 text-center">
+					<a href="course.html" class="btn btn-main">Paquete Personalizado</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Section Course ENd -->
+
+</div>
+
+{% endblock content %}
