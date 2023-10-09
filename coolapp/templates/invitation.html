@@ -2,9 +2,29 @@
 {% load static %}
 
 {%block content%}
+<style>
+	.fondoneon{
+		background: url({% static 'img/fondo_invitacionneon.png' %});
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position-x: center;
+		background-attachment: local;
+		padding: 200px
+	}
+	.colorneon{
+		background-color: rgb(57, 24, 59);
+	}
+</style>
 
-	<div class="my-2 mx-auto p-3 mt-5">
-		<p>{{ userinvitation.user }}</p>
-        <p>{{ userinvitation.paquete }}</p>
+	<div class="my-2 mx-auto p-3 mt-5 colorneon">
+			{% for invitation in userinvitation %}
+		<div class= "fondoneon img-fluid text-center">
+			{% if invitation.paquete == 'BASICO' %}
+			<p>{{ invitation.user }}</p>
+        	<p>{{ invitation.paquete }}</p>
+		
+			{% endif %}
+			{% endfor %}
+		</div>
 	</div>
 {%endblock content%}

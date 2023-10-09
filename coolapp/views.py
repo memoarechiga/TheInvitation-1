@@ -86,15 +86,19 @@ class InvitationCatalogInfantil(ListView):
 
 class UserInvitation(DetailView):
     model = Profile
-    context_object_name = 'userinvitation'
     template_name = "invitation.html"
     pk_url_kwarg = "profile_id"
     slug_url_kwarg = 'slug'
     query_pk_and_slug = True
 
+    def get_context_data(self, **kwargs):
+        context = super(UserInvitation, self).get_context_data(**kwargs)
+        context['userinvitation'] = Profile.objects.filter(slug=self.object.slug)
+        return context
+
 class UserInvitation1(DetailView):
     model = Profile
-    context_object_name = 'userinvitation'
+    context_object_name = 'userinvitation1'
     template_name = "invitation1.html"
     pk_url_kwarg = "profile_id"
     slug_url_kwarg = 'slug'

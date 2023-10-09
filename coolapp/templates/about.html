@@ -33,10 +33,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-3 col-md-6">
-                    <img src="{% static 'img/video1.gif' %}" alt="photo 1" class="">
-                </div>
-                <div class="col-lg-3 mt-lg-4 col-md-6">
-                    <img src="images/about/img-7.jpg" alt="photo 2" class="img-fluid">
+                    <img src="{% static 'img/party1.png' %}"   alt="photo 1" class="img-fluid">
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <div class="about-item position-relative mt-5 mt-lg-0">
@@ -45,7 +42,7 @@
     
                         <p class="mb-4">Somos una empresa con más de 5 años de experiencia digitalizando momentos. A pesar de ofrecer un servicio 100% en línea y vía telefónica, nos caracterizamos por tener una atención personalizada con respuestas inmediatas.</p>
     
-                        <a href="service.html" class="btn btn-main">Contacto<i class="ti-angle-right ml-2"></i></a>
+                        <a href="{% url 'contacto' %}" class="btn btn-main">Contacto<i class="ti-angle-right ml-2"></i></a>
                     </div>
                 </div>
             </div>

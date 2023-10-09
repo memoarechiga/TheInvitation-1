@@ -1,7 +1,12 @@
 {% load static %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
   <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
@@ -55,7 +60,7 @@
               <li><a class="dropdown-item" href="{% url 'paquetes' %}">Básico</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link" href="pricing.html">Proveedores</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'contacto' %}">Proveedores</a></li>
           <li class="nav-item"><a class="nav-link" href="{% url 'contacto' %}">Contacto</a></li>
         </ul>
         <div class="my-md-0 ml-lg-4 mt-4 mt-lg-0 ml-auto text-lg-right mb-3 mb-lg-0">
@@ -75,7 +80,7 @@
     </div>
   </nav>
 
-{% block content %} {% endblock content %}
+{% block content %}  {% endblock content %}
 
 <!-- Section Footer Start -->
 <!-- footer Start -->
@@ -84,9 +89,9 @@
 		<div class="row">
 			<div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
 				<h2 class="text-white mb-4">TheInvitation</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus illo ad quo sunt maiores, sint nostrum omnis eaque cumque dolorum.</p>
+				<p>Ser diferente</p>
 
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				<p>Hecho por Guillermo Arechiga</p>
 			</div>
 
 			<div class="col-lg-2 col-md-5 mb-5 mb-lg-0 mx-auto">
@@ -94,9 +99,9 @@
 					<h4 class="mb-4 text-white letter-spacing text-uppercase">Links</h4>
 					<ul class="list-unstyled footer-menu lh-40 mb-0">
 						<li><a href="{% url 'catalogo' %}"><i class="ti-angle-double-right mr-2"></i>Catalogo</a></li>
-						<li><a href="service.html"><i class="ti-angle-double-right mr-2"></i>Paquetes</a></li>
-						<li><a href="pricing.html"><i class="ti-angle-double-right mr-2"></i>Proveedores</a></li>
-						<li><a href="course.html"><i class="ti-angle-double-right mr-2"></i>Contacto</a></li>
+						<li><a href="{% url 'paquetes' %}"><i class="ti-angle-double-right mr-2"></i>Paquetes</a></li>
+						<li><a href="{% url 'paquetes' %}"><i class="ti-angle-double-right mr-2"></i>Proveedores</a></li>
+						<li><a href="{% url 'contacto' %}"><i class="ti-angle-double-right mr-2"></i>Contacto</a></li>
 					</ul>
 				</div>
 			</div>
@@ -116,9 +121,9 @@
 			</div>
 			<div class="col-lg-6 ml-auto">
 				<ul class="list-inline mb-0 footer-socials text-end">
-					<li class="list-inline-item"><a href="https://www.facebook.com/themefisher"><i class="ti-facebook"></i></a></li>
-					<li class="list-inline-item"><a href="https://twitter.com/themefisher"><i class="ti-twitter"></i></a></li>
-					<li class="list-inline-item"><a href="https://github.com/themefisher/"><i class="ti-github"></i></a></li>
+					<li class="list-inline-item"><a href=""><i class="ti-facebook"></i></a></li>
+					<li class="list-inline-item"><a href=""><i class="ti-twitter"></i></a></li>
+					<li class="list-inline-item"><a href=""><i class="ti-github"></i></a></li>
 				</ul>
 			</div>
 		</div>
@@ -135,8 +140,6 @@
    <!-- Form Validator -->
    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
-   <!-- Google Map -->
-   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"></script>
    <script src="{% static 'plugins/google-map/gmap.js' %}"></script>
    <script src="{% static 'js/script.js' %}"></script>
    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
